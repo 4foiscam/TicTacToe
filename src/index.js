@@ -7,6 +7,10 @@ import Voiture from "./Voiture";
 import Garage from "./Garage";
 import Game from "./Game";
 import Clock from "./Clock";
+import Toggle from "./Toggle";
+import LoginControl from "./LoginControl";
+import Mailbox from "./Mailbox";
+import Liste from "./Liste";
 import * as serviceWorker from './serviceWorker';
 
 //Syntaxe JSX - Javascript XML, elle nous permet d'écrire de l'html en React. C'est une simplification
@@ -33,8 +37,15 @@ import * as serviceWorker from './serviceWorker';
 //l'appelle à la fonction chaque seconde
 // setInterval(Tick2, 1000);
 
+ReactDOM.render(<LoginControl />, document.getElementById('root2'));
 ReactDOM.render(<Game />, document.getElementById('root'));
 ReactDOM.render(<Clock />, document.getElementById('popo'));
+ReactDOM.render(<Toggle />, document.getElementById('popo2'));
+const numbers= [4,9,3,8,2];
+ReactDOM.render(<Liste numbers={numbers}/>, document.getElementById('popo4'));
+
+// const message= ["Coucou","Pkmn"]
+// ReactDOM.render(<Mailbox messagesnonlus={messages}/>,document.getElementById("popo3"))
 
 //Ci dessous une manière d'appeler un composant à partir d'une fonction
 
